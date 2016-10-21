@@ -1,0 +1,19 @@
+<form action="/user/create" method="POST" class="form-signin">
+      <h2 class="form-signin-heading"> Cadastrar Usuário 
+      <div class="control-group"> 
+      <input type="text" class="form-control" placeholder="Nome" name="name">
+      </div>
+      <div class="control-group">
+            <div class="control-group">
+            <input type="text" class="form-control" placeholder="Email" name="email">
+            </div>
+            <div class="control-group">
+            <input type="password" class="form-control" placeholder="senha" name="password">
+            </div>
+            <div class="control-group">
+            <input type="password" class="form-control" placeholder="Confirme a Senha" name="confirmation">
+            </div>
+      <br/>
+            <input type="submit"  class="btn btn-lg btn-primary btn-block" value="Criar Usuário:w"/>
+            <input type="hidden" name="_csrf" value="<%=_csrf %>"/>
+</form>
