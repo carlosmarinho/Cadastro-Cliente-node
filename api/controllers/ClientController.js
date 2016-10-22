@@ -22,6 +22,23 @@ module.exports = {
         if (err) return res.redirect('/client/new');
         res.redirect('/client/show/' + client.id); 
       });
+    },
+    show: function(req, res){
+    	Client.findOne({id: req.param('id')}).exec(function (err, client){
+			  if (err) {
+			    return res.serverError(err);
+			  }
+
+			  if (!client) {
+			    return res.notFound('Nenhum Cliente encontrado.');
+			  }
+			  else{
+			  	res.view({
+			  		client: client
+			  	});
+			  }
+			})
+    	
     }
 	
 };
