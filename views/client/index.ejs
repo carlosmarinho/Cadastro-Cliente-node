@@ -2,9 +2,7 @@
   <h3>Usuarios
   <table class='table'>
       <tr>
-          <th>ID
-          <th>Nombre
-          <th>Apellidos
+          <th>Nome
           <th>Email
           <th>
           <th>
@@ -12,9 +10,7 @@
       </tr>
       <% _.each(clients, function(client) { %>
       <tr data-id="<%= client.id %>" data-model="client">
-          <td><%= client.id %>
           <td><%= client.name %>
-          <td><%= client.lastname %>
           <td><%= client.email %>
           <td><a href="/client/show/<%= client.id %>" class="btn btn-sm btn-primary">Show</a>
           <td><a href="/client/edit/<%= client.id %>" class="btn btn-sm btn-warning">Edit</a>
