@@ -12,16 +12,20 @@ module.exports = {
               type: 'string',
               required: true
             },
-            email: {
-              type: 'string',
-              required: true,
-              unique: true
-            },
-            encryptedPassword: {
-              type: 'string'
-            },
+    email: {
+      type: 'string',
+      required: true,
+      unique: true
+    },
+    encryptedPassword: {
+      type: 'string'
+    },
+    typeUser: {
+    	type: 'int',
+    	defaultsTo: 2
+    }
   }
 
-  
+
 };
 
